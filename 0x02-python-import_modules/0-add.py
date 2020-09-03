@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-exec(open('add_0').read())
+if __name__ == "__main__": 
+    import add_0
