@@ -6,4 +6,3 @@ b = 2
 def add(a, b):
     print("{}".format(a), "+", "{}".format(b), "=", "{}".format(a + b))
 
-add(a, b)
