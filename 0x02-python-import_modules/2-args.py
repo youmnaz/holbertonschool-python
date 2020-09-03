@@ -8,4 +8,4 @@ if __name__ == "__main__":
         elif i == 1:
             print(i, ":", "argument", "/n", "i", ":", "argv", end="")
         else:
-            print(i, ":", "arguments", "/n", "i", ":", "argv", end="/n")
+            print(len(sys.argv), ":", "arguments", "/n", "i", ":", "argv", end="/n")
