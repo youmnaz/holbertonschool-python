@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import hidden_4
-    print("\n".join(dir()))
+    for i in dir(hidden_4):
+        if i[0] != "_":
+            print("\n".join(dir(hidden_4)))
