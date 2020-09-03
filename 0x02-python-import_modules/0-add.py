@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-os.system(add_0.py)
+if __name__ == "__main__":
+    import add_0
