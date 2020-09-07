@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    if tuple_a == ():
-        return tuple_b
-    if tuple_b == ():
-        return tuple_a
-    if len(tuple_a) >= 2 & len(tuple_b) >= 2:
-        tuple_c = ("({}, {})".format(
-            tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1]))
-    if len(tuple_a) == 1:
-        tuple_c = ("({}, {})".format(tuple_a[0] + tuple_b[0], tuple_b[1]))
-    if len(tuple_b) == 1:
-        tuple_c = ("({}, {})".format(tuple_a[0] + tuple_b[0], tuple_a[1]))
-    if len(tuple_a) == 0:
-        tuple_c = tuple_b
-    if len(tuple_b) == 0:
-        tuple_c = tuple_a
-    return tuple_c
+    if len(tuple_a) >= 2:
+        copya = tuple_a[:2]
+    else:
+        if len(tuple_a) == 1:
+            copya = tuple_a[0], 0
+        else:
+            copya = 0, 0
+    if len(tuple_b) >= 2:
+        copyb = tuple_b[:2]
+    else:
+        if len(tuple_b) == 1:
+            copyb = tuple_b[0], 0
+        else:
+            copyb = 0, 0
+    return (copya[0] + copyb[0], copya[1] + copyb[1])
