@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""
+    1-square.py
+    Module that defines a Square
+    return size
+"""
+
+
 class Square:
     """ This is a class that defines a Square
         return size
