@@ -18,6 +18,10 @@ class Square:
         self.__position = position
         if type(self.__position) != tuple or len(self.__position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif any(type(v) != int for v in self.__position):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif any(v < 0 for v in self.__position):
+            raise TypeError("position must be a tuple of 2 positive integers")
 
         if not isinstance(self.__size, int):
             raise TypeError("size must be an integer")
@@ -57,14 +61,13 @@ class Square:
     def position(self, value):
         """ Function that sets the position value
         """
-        if not isinstance(value, tuple):
+        if type(value) != tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
+        elif any(type(v) != int for v in value):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(i >= 0 for i in value):
+        elif any(v < 0 for v in value):
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        self.__position = value
 
     def my_print(self):
         """ Function that prints the area based on the size and position
