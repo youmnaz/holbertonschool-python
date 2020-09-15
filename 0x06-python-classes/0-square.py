@@ -4,6 +4,8 @@
     Module that defines a Square
     return {}
 """
+
+
 class Square:
     """ This is An Empty Class that defines a Square
         return empty block
