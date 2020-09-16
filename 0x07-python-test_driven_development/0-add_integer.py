@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    0_add_integer module
+    0_add_integer.py
     This function adds two numbers
     return a + b
 """
