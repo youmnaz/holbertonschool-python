@@ -61,3 +61,4 @@ class Rectangle:
                 s += ('#' * self.__width)
                 if i != self.__height - 1:
                     s += '\n'
+        return s
