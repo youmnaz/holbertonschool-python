@@ -1,20 +1,23 @@
 #!/usr/bin/python3
 """
-    6-rectangle.py
-    Class Rectangle that defines a rectangle by: (based on 5-rectangle.py)
+    7-rectangle module
+    Class Rectangle that defines a rectangle by: (based on 6-rectangle.py)
 """
 
 
 class Rectangle:
     """
-        Class Rectangle that defines a rectangle by: (based on 5-rectangle.py)
+        Class Rectangle that defines a rectangle by: (based on 6-rectangle.py)
+        number_of_instances is a field class
+        print_symbol is a field class
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ Initialize instances"""
-        self.width = width
         self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -61,7 +64,7 @@ class Rectangle:
         s = ""
         if self.__height != 0 and self.__width != 0:
             for i in range(self.__height):
-                s += ('#' * self.__width)
+                s += (str(self.print_symbol) * self.__width)
                 if i != self.__height - 1:
                     s += '\n'
         return s
