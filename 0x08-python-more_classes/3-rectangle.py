@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
     3-rectangle.py
-    Class Rectangle that defines a rectangle by: (based on 1-rectangle.py)
+    Class Rectangle that defines a rectangle by: (based on 2-rectangle.py)
 """
 
 
 class Rectangle:
     """
-        Class Rectangle that defines a rectangle by: (based on 1-rectangle.py)
+        Class Rectangle that defines a rectangle by: (based on 2-rectangle.py)
     """
     def __init__(self, width=0, height=0):
         """ Initialize instances"""
