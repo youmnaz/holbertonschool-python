@@ -84,11 +84,20 @@ class Rectangle(Base):
         """Returns the area"""
         return self.__height * self.__width
    
- def display(self):
+    def display(self):
         """ Return the rectangle with the character #"""
         s = ""
         if self.__height != 0 and self.__width != 0:
+            s += '\n' * self.__y
             for i in range(self.__height):
-                for j in range(self.__width):
-                    print('#', end='')
-                print()
+                s += ' ' * self.__x
+                s += ("#" * self.__width)
+                if i != self.__height - 1:
+                    s += '\n'
+        print(s)
+
+    def __str__(self):
+        """Return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return ("[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.__x, self.__y,
+            self.__width, self.__height))
