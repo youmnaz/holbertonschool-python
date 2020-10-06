@@ -101,3 +101,46 @@ class Rectangle(Base):
         return ("[{}] ({}) {}/{} - {}/{}".format(
             type(self).__name__, self.id, self.__x, self.__y,
             self.__width, self.__height))
+   
+    def update(self, *args, **kwargs):
+        """
+        update the properties of the rectangle
+        """
+        if len(args) == 0:
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    if str(key) == "id":
+                        self.id = value
+                        continue
+                    if str(key) == "width":
+                        self.__width = value
+                        continue
+                    if str(key) == "height":
+                        self.__height = value
+                        continue
+                    if str(key) == "x":
+                        self.__x = value
+                        continue
+                    if str(key) == "y":
+                        self.__y = value
+                        continue
+        if len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        elif len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        elif len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        elif len(args) == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
