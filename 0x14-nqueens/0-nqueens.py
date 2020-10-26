@@ -7,13 +7,12 @@ import sys
 
 def n_q(t_arr, arr, col, i, n):
     """
-       n_q - Find possible solutions for N-queen problem and return
-             in a list
-       @t_arr: temp list to store the all points of a possible solution
-       @arr: store all the solution
+       n_q: find possible solutions for N-queen problem and return list
+       @t_arr: temp list to store all points of a possible solution
+       @arr: store solution
        @col: save a column use for a queen
        @i: the row of the chess table
-       @n: Number of queens
+       @n: number of queens
     """
     if (i > n):
         arr.append(t_arr[:])
