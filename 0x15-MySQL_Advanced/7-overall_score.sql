@@ -1,4 +1,4 @@
--- creates a stored procedure ComputeOverallScoreForUser
+B-- creates a stored procedure ComputeOverallScoreForUser
 -- that computes and store the overall score for a student.
 DELIMITER |
 CREATE PROCEDURE ComputeOverallScoreForUser (
