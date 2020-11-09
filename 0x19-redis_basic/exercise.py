@@ -60,7 +60,8 @@ class Cache:
         """ Instance of Redis db """
         self._redis = redis.Redis()
         self._redis.flushdb()
-   
+
+    @replay   
     @call_history
     @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
