@@ -61,9 +61,9 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    @replay   
     @call_history
     @count_calls
+    @replay
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """ Creates key and stores it with data """
         # uuid must be type cast to str for Redis to be able to accept it
